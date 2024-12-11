@@ -11,8 +11,7 @@ while True:
         print('You are hanged.')
         break
     if '_' not in s:
-        print('Congratulations! You guessed the word: \''+word+'\'')
-        print('Phew... you are saved.')
+        print('Congratulations! You guessed the word: \''+word+'\'\nPhew... you are saved.')
         break
     print(s)
     c=input('Guess a letter: ')[0]
@@ -22,7 +21,7 @@ while True:
         print('Good guess!')
         for j in range(len(word)):
             if word[j]==c:
-                s=s[:j]+c+s[(j+1):]
+                s=s[:j]+c+s[j+1:]
         l.append(c)
     else:
         print('Wrong guess!')
